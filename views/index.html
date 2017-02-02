@@ -96,8 +96,8 @@ $.ajax({
   hotels.forEach(function(hotel){
     $hotelNames.append('<option>' + hotel.name + '</option>')
   })
-.catch( console.error.bind(console) );
 })
+.catch( console.error.bind(console) );
 
 
 //-------------------------------------------------------------
@@ -112,8 +112,8 @@ $.ajax({
   restaurants.forEach(function(restaurant){
     $restaurantNames.append('<option>' + restaurant.name + '</option>')
   })
-.catch( console.error.bind(console) );
 })
+.catch( console.error.bind(console) );
 
 
 // //-------------------------------------------------------------
@@ -129,8 +129,47 @@ $.ajax({
   activities.forEach(function(activity){
     $activityNames.append('<option>' + activity.name + '</option>')
   })
-.catch( console.error.bind(console) );
 })
+.catch( console.error.bind(console) );
+
+// //-------------------------------------------------------------
+
+// $.ajax({
+//   method: 'GET',
+//   url: '/api/days',
+//   // data: someDataToSend, // e.g. for POST requests
+// })
+// .then(function (days) {
+//   // console.log(days);
+//   // select data-type="hotel"
+//   // var $getDays = $('select[data-type="activity"]');
+//   // activities.forEach(function(activity){
+//     // $activityNames.append('<option>' + activity.name + '</option>')
+//   // })
+// })
+// .catch(console.error.bind(console));
+
+
+// //-------------------------------------------------------------
+// $.get('/api/days')
+// .then(function (data) { console.log('GET response data', data) })
+// .catch(console.error.bind(console));
+// // should log an empty array
+
+// $.post('/api/days')
+// .then(function (data) { console.log('POST response data', data) })
+// .catch(console.error.bind(console));
+// // should log a new day
+
+// $.get('/api/days')
+// .then(function (data) { console.log('GET response data', data) })
+// .catch(console.error.bind(console));
+// should now log an array with the new day in it
+
+
+// //-------------------------------------------------------------
+
+
 
 
 

@@ -61,6 +61,18 @@ var tripModule = (function () {
     switchTo(newDay);
   }
 
+
+    $.get('/api/days')
+    .then(function (data) {
+        data.forEach(function(returnedDay){
+        // $dayAddButton.append('<button class="btn btn-circle day-btn">' + day.date + '</button>');
+        days.push(returnedDay);
+        addDay(returnedDay);
+      });
+      console.log(days);
+    })
+    .catch(console.error.bind(console));
+
   // ~~~~~~~~~~~~~~~~~~~~~~~
     // Do not delete a day until it has already been deleted from the DB
   // ~~~~~~~~~~~~~~~~~~~~~~~

@@ -23,6 +23,7 @@ var dayModule = (function () {
     $dayTitle = $('#day-title > span');
   });
 
+
   // ~~~~~~~~~~~~~~~~~~~~~~~
     // If you follow the logic of `attractionsModule.getEnhanced` (try following it!), you will note that it uses another method given to us by the `attractionModule` (singular). Try just using the method `attractionModule` gives you. You may run into issues with this - you can update `.getEnhanced` or create some new logic to make everything work.
   // ~~~~~~~~~~~~~~~~~~~~~~~
@@ -140,11 +141,31 @@ var dayModule = (function () {
 
   // globally accessible module methods
 
+    // $.get('/api/days')
+    // .then(function (data) {
+    //     data.forEach(function(day){
+    //     // $dayAddButton.append('<button class="btn btn-circle day-btn">' + day.date + '</button>');
+    //     days.push(day);
+    //   });
+    //   console.log(day);
+    //   days.addDay();
+    // })
+    // .catch(console.error.bind(console));
+
+
   var publicAPI = {
 
     create: function (databaseDay) {
+      //day objects
       return new Day(databaseDay);
+      // return databaseDay;
+      // console.log(databaseDay);
     }
+
+    
+
+    
+
 
   };
 
